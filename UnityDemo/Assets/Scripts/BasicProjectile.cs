@@ -39,8 +39,17 @@ public class BasicProjectile : MonoBehaviour
         Destroy(gameObject);
     }
 
+    const string FRIENDLY_TAG = "Friendly";
+    const string ENEMY_TAG = "Enemy";
+
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag != FRIENDLY_TAG && other.tag != ENEMY_TAG)
+            return;
+
+        if (other.tag == tag)
+            return;
+
         Health otherHealth = other.GetComponent<Health>();
 
         if (otherHealth != null)
