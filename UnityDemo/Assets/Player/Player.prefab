@@ -204,6 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901a8b3d9a7cdb94bb2feefe43d6f3ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _primaryGunTemplate: {fileID: 1994549533324423578, guid: 5afa99c8c849b354ab8908d02a0bcccb, type: 3}
+  _secondaryGunTemplate: {fileID: 1994549533324423578, guid: 5afa99c8c849b354ab8908d02a0bcccb, type: 3}
+  _primarySocket: {fileID: 256604080509689269}
+  _secondarySocket: {fileID: 4727986813265300679}
 --- !u!114 &124180751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +247,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &8069224540676142720
 GameObject:

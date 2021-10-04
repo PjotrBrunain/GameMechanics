@@ -7,6 +7,9 @@ public class PlayerCharacter : BasicCharacter
     const string MOVEMENT_HORIZONTAL = "MovementHorizontal";
     const string MOVEMENT_VERTICAL = "MovementVertical";
     const string GROUND_LAYER = "Ground";
+    const string PRIMARY_FIRE = "PrimaryFire";
+    const string SECONDARY_FIRE = "SecondaryFire";
+    const string RELOAD = "Reload";
 
     private Plane _cursorMovementPlane;
 
@@ -20,6 +23,7 @@ public class PlayerCharacter : BasicCharacter
     private void Update()
     {
         HandleMovementInput();
+        HandleFireInput();
     }
 
     void HandleMovementInput()
@@ -51,5 +55,19 @@ public class PlayerCharacter : BasicCharacter
         }
 
         _movementBehavior.DesiredLookatPoint = positionOfMouseInWorld;
+    }
+
+    void HandleFireInput()
+    {
+        if (_shootingBehavior == null) return;
+
+        //Fire
+        if (Input.GetAxis(PRIMARY_FIRE) > 0.0f)
+            _shootingBehavior.PrimaryFire();
+        if (Input.GetAxis(SECONDARY_FIRE) > 0.0f)
+            _shootingBehavior.SecondaryFire();
+
+        if (Input.GetAxis(RELOAD) > 0.0f)
+            _shootingBehavior.Reload();
     }
 }
