@@ -17,6 +17,13 @@ public class MovementBehavior : MonoBehaviour
         set => _desiredMovementDirection = value;
     }
 
+    protected GameObject _target;
+    public GameObject Target
+    {
+        get => _target;
+        set => _target = value;
+    }    
+
     protected virtual void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
