@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637689431705674500
-    m_Hash: 355844088
+      ticks: 637689325253592534
+    m_Hash: 3167034021
   m_LockFileStatus:
     m_FilePath: E:/GameMechanics/UnityDemo/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637689431705679462
-    m_Hash: 940754073
+      ticks: 637689325599252503
+    m_Hash: 3439752707
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -68,6 +68,8 @@ m_PackageAssets:
         - 1.9.0
         - 1.10.2
         - 1.11.2
+        - 1.12.5
+        - 1.13.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -82,6 +84,8 @@ m_PackageAssets:
         - 1.9.0
         - 1.10.2
         - 1.11.2
+        - 1.12.5
+        - 1.13.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -2839,18 +2843,8 @@ m_PackageAssets:
       errors: []
       versions:
         all:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        - 0.1.9-preview
-        - 1.0.0
-        - 1.0.5
         - 1.0.6
         compatible:
-        - 0.1.5-preview
-        - 0.1.6-preview
-        - 0.1.9-preview
-        - 1.0.0
-        - 1.0.5
         - 1.0.6
         verified: 1.0.6
       dependencies: []
@@ -2871,7 +2865,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637429759280000000
+      datePublishedTicks: 0
       documentationUrl: 
       hasRepository: 1
       repository:
