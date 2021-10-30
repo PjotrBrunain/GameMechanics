@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField] private GameObject _player = null;
-    
+    enum ItemType
+    {
+        Hammer,
+        Saw
+    }
 
+    [SerializeField] private ItemType itemType;
 }

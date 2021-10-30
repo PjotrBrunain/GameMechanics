@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PickupBehavior : MonoBehaviour
 {
-    [SerializeField] private float _pickupSpeed = 10f;
+    [SerializeField] private float _pickupSpeed = 2f;
     [SerializeField] private List<GameObject> _pickups = null;
     [SerializeField] private float _pickupRadius = 5f;
     private float _accuTime;
-    private bool _pickingUp;
+    private List<GameObject> _pickedUpItems;
 
     GameObject _closestPickup = null;
 
@@ -44,10 +44,19 @@ public class PickupBehavior : MonoBehaviour
 
     private void HandlePickup()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Vector3.Distance(_closestPickup.transform.position, transform.position) < _pickupRadius)
         {
-            if (_accuTime < _pickupSpeed) _accuTime += Time.deltaTime;
-            else print("Picked up");
+            if (Input.GetKey(KeyCode.E))
+            {
+                if (_accuTime < _pickupSpeed) _accuTime += Time.deltaTime;
+                else
+                {
+                    Debug.Log("Picked Up");
+                    _pickedUpItems.Add(_closestPickup);
+                    _pickups.Remove(_closestPickup);
+                    _accuTime = 0;
+                }
+            }
         }
-e    }
+    }
 }
