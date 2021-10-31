@@ -801,6 +801,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1738051115, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818257515071532299, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7148026036627615509, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1076,6 +1084,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9151093541074879527, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: _width
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151093541074879527, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: _buffer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151093541074879527, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: _height
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151093541074879527, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: _pickupGrayTex
+      value: 
+      objectReference: {fileID: 2800000, guid: 1af0c05572aa7d74d860f0be8561db00, type: 3}
+    - target: {fileID: 9151093541074879527, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: _pickupColorTex
+      value: 
+      objectReference: {fileID: 2800000, guid: 172a682b50ae35b45953e706b0395bc4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
 --- !u!1001 &7148026034941993277
@@ -1085,6 +1113,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1738051115, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818257515071532299, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7148026036627615509, guid: 2d5b6ae1bbc5f20449e302fcbe401a2f, type: 3}
       propertyPath: m_RootOrder
       value: 2

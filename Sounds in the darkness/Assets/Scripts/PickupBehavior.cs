@@ -5,12 +5,19 @@ using UnityEngine;
 public class PickupBehavior : MonoBehaviour
 {
     [SerializeField] private float _pickupSpeed = 2f;
-    [SerializeField] private List<GameObject> _pickups = null;
+    [SerializeField] private List<GameObject> _pickups;
     [SerializeField] private float _pickupRadius = 5f;
     private float _accuTime;
     private List<GameObject> _pickedUpItems;
 
+    public List<GameObject> PickedUpItems => _pickedUpItems;
+    public List<GameObject> Pickups => _pickups;
     GameObject _closestPickup = null;
+
+    private void Start()
+    {
+        _pickedUpItems = new List<GameObject>();
+    }
 
     private void Update()
     {
