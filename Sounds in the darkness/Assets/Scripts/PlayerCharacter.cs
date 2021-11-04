@@ -24,4 +24,5 @@ public class PlayerCharacter : BasicCharacter
 
         _movementBehavior.DesiredMovementDirection = movement;
     }
+
 }

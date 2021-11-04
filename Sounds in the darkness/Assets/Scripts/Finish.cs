@@ -27,4 +27,9 @@ public class Finish : MonoBehaviour
             }
         }
     }
+
+    public void TriggerRespawn()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

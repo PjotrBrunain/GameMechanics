@@ -34,11 +34,16 @@ public class MovementBehavior : MonoBehaviour
         HandleMovement();
     }
 
+    private const string STATICLEVEL_LAYER = "StaticLevel";
+
     protected virtual void HandleMovement()
     {
         Vector3 movement = _desiredMovementDirection.normalized;
         movement *= _movementSpeed;
 
         _rigidBody.velocity = movement;
+
+        if (!Physics.Raycast(gameObject.transform.position,new Vector3( 0.0f, -1.0f,0.0f), 0.2f, LayerMask.GetMask(STATICLEVEL_LAYER)))
+        _rigidBody.AddForce(new Vector3(0.0f, -500.0f, 0.0f), ForceMode.Acceleration);
     }
 }
