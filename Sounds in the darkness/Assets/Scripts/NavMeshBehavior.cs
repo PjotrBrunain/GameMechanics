@@ -11,10 +11,9 @@ public class NavMeshBehavior : MovementBehavior
 
     private Vector3 _previousTargetPosition = Vector3.zero;
 
-    [SerializeField] private float wanderRadius;
-    [SerializeField] private float wanderTime;
+    [SerializeField] private float _wanderRadius;
 
-    private float timer;
+    private bool _speedHalved;
 
     protected override void Awake()
     {
@@ -33,6 +32,7 @@ public class NavMeshBehavior : MovementBehavior
     //}
 
     private const string STATICLEVEL_LAYER = "StaticLevel";
+    private const string PLAYER_TAG = "Player";
 
     const float MOVEMENT_EPSILON = .25f;
     protected override void HandleMovement()
@@ -43,22 +43,38 @@ public class NavMeshBehavior : MovementBehavior
             return;
         }
 
-        timer += Time.deltaTime;
 
-        if (timer >= wanderTime)
+        if (Physics.Raycast(transform.position, (_target.transform.position - transform.position).normalized, out var hit))
         {
-            _navMeshAgent.SetDestination(RandomNavSphere(_navMeshAgent.transform.position, 1.0f, /*LayerMask.GetMask(STATICLEVEL_LAYER)*/ -1));
-            _navMeshAgent.isStopped = false;
-            timer = 0;
+            if (hit.transform.gameObject.tag == PLAYER_TAG)
+            {
+                if ((_target.transform.position - _previousTargetPosition).sqrMagnitude > MOVEMENT_EPSILON)
+                {
+                    _navMeshAgent.SetDestination(_target.transform.position);
+                    _navMeshAgent.isStopped = false;
+                    _previousTargetPosition = _target.transform.position;
+                }
+                if (_speedHalved)
+                {
+                    _navMeshAgent.speed *= 2;
+                    _speedHalved = false;
+                }
+                return;
+            }
         }
 
-
-        //if ((_target.transform.position - _previousTargetPosition).sqrMagnitude > MOVEMENT_EPSILON)
-        //{
-        //    _navMeshAgent.SetDestination(_target.transform.position);
-        //    _navMeshAgent.isStopped = false;
-        //    _previousTargetPosition = _target.transform.position;
-        //}
+        if ((_navMeshAgent.destination - transform.position).magnitude < MOVEMENT_EPSILON)
+        {
+            Vector3 pos = RandomNavSphere(_navMeshAgent.transform.position,
+                _wanderRadius, -1);
+            _navMeshAgent.SetDestination(pos);
+            _navMeshAgent.isStopped = false;
+        }
+        if (!_speedHalved)
+        {
+            _navMeshAgent.speed /= 2;
+            _speedHalved = true;
+        }
     }
 
     private static Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -69,7 +85,7 @@ public class NavMeshBehavior : MovementBehavior
 
         NavMeshHit navHit;
 
-        NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
+        while (!NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask));
 
         return navHit.position;
     }
