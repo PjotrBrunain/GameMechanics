@@ -7,3 +7,4 @@ moment alle pickups opgepickt "taak" op UI bijzetten om uit de basement te gaan
 2e level moeilijker maken (meer labyrinth achtig, meer obstakels, meer pickups)
 
 If line of sight make enemies move faster otherwise just wander around
+https://www.youtube.com/watch?v=pMzBiyLVfd8&list=PLiyjwVB09t5zm53TvttbxLE_YPrL8VkSm&index=4&ab_channel=Vsauce3
