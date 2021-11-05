@@ -5,3 +5,5 @@ Press E bij pickup zetten
 Inkom licht
 moment alle pickups opgepickt "taak" op UI bijzetten om uit de basement te gaan
 2e level moeilijker maken (meer labyrinth achtig, meer obstakels, meer pickups)
+
+If line of sight make enemies move faster otherwise just wander around

@@ -13,6 +13,8 @@ public class PlayTimeHUD : MonoBehaviour
     private Image _timerFillerImageComponent;
     [SerializeField] private GameObject _timerFillerBackground;
     private Image _timerFillerBackgroundImageComponent;
+    [SerializeField] private GameObject _pickupHelpText;
+    private Text _pickupHelpTextComponent;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class PlayTimeHUD : MonoBehaviour
         if (_timerFiller != null) _timerFillerImageComponent = _timerFiller.GetComponent<Image>();
         if (_timerFillerBackground != null)
             _timerFillerBackgroundImageComponent = _timerFillerBackground.GetComponent<Image>();
+        if (_pickupHelpText != null) _pickupHelpTextComponent = _pickupHelpText.GetComponent<Text>();
         PlayerCharacter player = FindObjectOfType<PlayerCharacter>();
 
         if (player != null)
@@ -44,12 +47,14 @@ public class PlayTimeHUD : MonoBehaviour
         {
             if (_playerPickupBehavior.HasPickupInRange)
             {
+                _pickupHelpTextComponent.enabled = true;
                 _timerFillerImageComponent.enabled = true;
                 _timerFillerBackgroundImageComponent.enabled = true;
                 _timerFillerImageComponent.fillAmount = _playerPickupBehavior.AccuTime / _playerPickupBehavior.PickupSpeed;
             }
             else
             {
+                _pickupHelpTextComponent.enabled = false;
                 _timerFillerImageComponent.enabled = false;
                 _timerFillerBackgroundImageComponent.enabled = false;
             }
