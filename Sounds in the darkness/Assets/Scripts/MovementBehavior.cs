@@ -11,6 +11,14 @@ public class MovementBehavior : MonoBehaviour
     
     protected Vector3 _desiredMovementDirection = Vector3.zero;
 
+    protected float _stunTime = 0.0f;
+
+    public float StunTime
+    {
+        set => _stunTime = value;
+        get => _stunTime;
+    }
+
     public Vector3 DesiredMovementDirection
     {
         get => _desiredMovementDirection;
@@ -41,9 +49,15 @@ public class MovementBehavior : MonoBehaviour
         Vector3 movement = _desiredMovementDirection.normalized;
         movement *= _movementSpeed;
 
-        _rigidBody.velocity = movement;
+        if (_stunTime <= 0)
+            _rigidBody.velocity = movement;
+        else
+        {
+            _stunTime -= Time.deltaTime;
+            _rigidBody.velocity = Vector3.zero;
+        }
 
         if (!Physics.Raycast(gameObject.transform.position,new Vector3( 0.0f, -1.0f,0.0f), 0.2f, LayerMask.GetMask(STATICLEVEL_LAYER)))
-        _rigidBody.AddForce(new Vector3(0.0f, -500.0f, 0.0f), ForceMode.Acceleration);
+            _rigidBody.AddForce(new Vector3(0.0f, -500.0f, 0.0f), ForceMode.Acceleration);
     }
 }

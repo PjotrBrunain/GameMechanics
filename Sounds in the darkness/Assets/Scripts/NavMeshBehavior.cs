@@ -14,6 +14,7 @@ public class NavMeshBehavior : MovementBehavior
     [SerializeField] private float _wanderRadius;
 
     private bool _speedHalved;
+    private bool _playerIsTarget;
 
     protected override void Awake()
     {
@@ -43,6 +44,12 @@ public class NavMeshBehavior : MovementBehavior
             return;
         }
 
+        if (_stunTime >= 0)
+        {
+            _navMeshAgent.isStopped = true;
+            _stunTime -= Time.deltaTime;
+            return;
+        }
 
         if (Physics.Raycast(transform.position, (_target.transform.position - transform.position).normalized, out var hit))
         {
@@ -53,6 +60,7 @@ public class NavMeshBehavior : MovementBehavior
                     _navMeshAgent.SetDestination(_target.transform.position);
                     _navMeshAgent.isStopped = false;
                     _previousTargetPosition = _target.transform.position;
+                    _playerIsTarget = true;
                 }
                 if (_speedHalved)
                 {
@@ -63,12 +71,13 @@ public class NavMeshBehavior : MovementBehavior
             }
         }
 
-        if ((_navMeshAgent.destination - transform.position).magnitude < MOVEMENT_EPSILON)
+        if ((_navMeshAgent.destination - transform.position).magnitude < MOVEMENT_EPSILON || _playerIsTarget)
         {
             Vector3 pos = RandomNavSphere(_navMeshAgent.transform.position,
                 _wanderRadius, -1);
             _navMeshAgent.SetDestination(pos);
             _navMeshAgent.isStopped = false;
+            _playerIsTarget = false;
         }
         if (!_speedHalved)
         {

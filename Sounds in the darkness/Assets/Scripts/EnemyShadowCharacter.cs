@@ -57,12 +57,16 @@ public class EnemyShadowCharacter : BasicCharacter
 
     void HandleRipple()
     {
+        if (_soundRippleSystem == null || _playerTarget == null) return;
         _accuTime += Time.deltaTime;
         if (_accuTime >= _emitTime)
         {
             _soundRippleSystem.Play();
             _accuTime = 0.0f;
         }
+
+        float distance = Vector3.Distance(transform.position, _playerTarget.transform.position);
+        _soundRippleSystem.startColor = new Color {r=1.0f, g = 1.0f - (1.0f / distance), b = 1.0f - 1.0f / distance, a = 1.0f};
     }
 
     const string KILL_METHODNAME = "Kill";

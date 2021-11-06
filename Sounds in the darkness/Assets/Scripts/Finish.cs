@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider))]
 public class Finish : MonoBehaviour
 {
+    [SerializeField] private int _level;
+
     private PickupBehavior _playerPickupBehavior;
     //private BoxCollider _boxCollider;
     private void Start()
@@ -23,7 +25,7 @@ public class Finish : MonoBehaviour
         {
             if (_playerPickupBehavior.Pickups.Count == 0)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(_level);
             }
         }
     }

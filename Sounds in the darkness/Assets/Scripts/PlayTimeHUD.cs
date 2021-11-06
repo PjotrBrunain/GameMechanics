@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class PlayTimeHUD : MonoBehaviour
 {
-    [SerializeField] private GameObject _colorImage;
+    [SerializeField] private GameObject _colorImage = null;
     private Image _imageComponent;
     private PickupBehavior _playerPickupBehavior;
-    [SerializeField] private GameObject _timerFiller;
+    [SerializeField] private GameObject _timerFiller = null;
     private Image _timerFillerImageComponent;
-    [SerializeField] private GameObject _timerFillerBackground;
+    [SerializeField] private GameObject _timerFillerBackground = null;
     private Image _timerFillerBackgroundImageComponent;
-    [SerializeField] private GameObject _pickupHelpText;
+    [SerializeField] private GameObject _pickupHelpText = null;
     private Text _pickupHelpTextComponent;
+    [SerializeField] private GameObject _getOutText = null;
+    private Text _getOutTextComponent;
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class PlayTimeHUD : MonoBehaviour
         if (_timerFillerBackground != null)
             _timerFillerBackgroundImageComponent = _timerFillerBackground.GetComponent<Image>();
         if (_pickupHelpText != null) _pickupHelpTextComponent = _pickupHelpText.GetComponent<Text>();
+        if (_getOutText != null) _getOutTextComponent = _getOutText.GetComponent<Text>();
         PlayerCharacter player = FindObjectOfType<PlayerCharacter>();
 
         if (player != null)
@@ -59,5 +62,7 @@ public class PlayTimeHUD : MonoBehaviour
                 _timerFillerBackgroundImageComponent.enabled = false;
             }
         }
+        if (_playerPickupBehavior.Pickups.Count == 0)
+            _getOutTextComponent.enabled = true;
     }
 }
