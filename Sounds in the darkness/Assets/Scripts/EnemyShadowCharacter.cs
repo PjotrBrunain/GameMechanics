@@ -8,6 +8,8 @@ public class EnemyShadowCharacter : BasicCharacter
     [SerializeField] private float _attackRange = 2.0f;
     private Health _playerHealth = null;
     [SerializeField] private int _damage = 5;
+    [SerializeField] private GameObject _soundEmitter = null;
+    private AudioSource _audioSourceComponent = null;
 
     private ParticleSystem _soundRippleSystem = null;
 
@@ -25,6 +27,8 @@ public class EnemyShadowCharacter : BasicCharacter
         if (rippleSystem) _soundRippleSystem = rippleSystem;
 
         _accuTime = Random.Range(0.0f, _emitTime);
+
+        if (_soundEmitter != null) _audioSourceComponent = _soundEmitter.GetComponent<AudioSource>();
     }
 
     private void Update()
