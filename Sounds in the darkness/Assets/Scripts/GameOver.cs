@@ -15,7 +15,7 @@ public class GameOver : MonoBehaviour
 
     void TriggerGameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     private const string TRIGGERRESPAWN_METHODNAME = "TriggerRespawn";
