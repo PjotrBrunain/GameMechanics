@@ -42004,6 +42004,10 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2455028352416957873, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3970485360136907182, guid: 17c05fbcbe98aa24a810a53718d1b453, type: 3}
       propertyPath: m_Name
       value: PlayTimeHUD
