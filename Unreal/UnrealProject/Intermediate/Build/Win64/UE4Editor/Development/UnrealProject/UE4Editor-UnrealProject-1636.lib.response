@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-UnrealProject-1636.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UnrealProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\HealthComponent.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\UnrealProject.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\UnrealProjectGameModeBase.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\HealthComponent.gen.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\UnrealProject.init.gen.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\UnrealProjectGameModeBase.gen.cpp.obj"
+"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\Default.rc2.res"
+/OUT:"E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\UE4Editor-UnrealProject-1636.lib"
