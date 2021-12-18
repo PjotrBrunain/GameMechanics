@@ -1,2 +1,0 @@
-E:\GameMechanics\Unreal\UnrealProject\Intermediate\Build\Win64\UE4Editor\Development\UnrealProject\Definitions.UnrealProject.h
-E:\GameMechanics\Unreal\UnrealProject\Source\UnrealProject\UnrealProject.h
