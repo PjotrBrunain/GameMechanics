@@ -26,9 +26,14 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
 		TArray<AInteractable*> m_pUnlockingActors{};
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+		float m_UpdateTime{};
+
+	float m_AccuTime{};
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	bool GetIsUnlocked();
 };

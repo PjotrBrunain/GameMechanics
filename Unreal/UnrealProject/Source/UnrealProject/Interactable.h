@@ -1,13 +1,21 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-#include "Components/WidgetComponent.h"
 #include "InteractInterface.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+//#include "Delegates/Delegate.h"
+
+class UWidgetComponent;
+class UStaticMeshComponent;
+class UUnlockingComponent;
+//DECLARE_MULTICAST_DELEGATE(FActivated);
+//DECLARE_MULTICAST_DELEGATE(FActivated);
+//DECLARE_DYNAMIC_DELEGATE(FActivated);
+
 #include "Interactable.generated.h"
 
-UCLASS()
+UCLASS(BlueprintType, BluePrintable)
 class UNREALPROJECT_API AInteractable : public AActor, public IInteractInterface
 {
 	GENERATED_BODY()
@@ -15,35 +23,48 @@ class UNREALPROJECT_API AInteractable : public AActor, public IInteractInterface
 public:	
 	// Sets default values for this actor's properties
 	AInteractable();
-
-	void Activate();
-
-	
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
-
 	bool m_IsActive{};
-	DECLARE_DELEGATE(Activated);
-	Activated m_Activated{};
+
+	//UPROPERTY(BlueprintAssignable, Category = ActivatedEvent)
+	//	FActivated m_Activated{};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
 		FVector m_WidgetLocation {};
 
-	UWidgetComponent* m_pEnabledWidget{};
-	UWidgetComponent* m_pDisabledWiget{};
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+		UWidgetComponent* m_pEnabledWidget{};
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+		UWidgetComponent* m_pDisabledWiget{};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UnlockingComponent)
+		UUnlockingComponent* m_pUnlockingComponent {};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+		UStaticMeshComponent* m_pStaticMesh {};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
 		bool m_WidgetEnabled{true};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable)
 		bool m_Disabled{};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable)
+		bool m_Unlocked{};
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	virtual void ShowWidget() override;
-	virtual void HideWidget() override;
+	void ShowWidget_Implementation() override;
+	void HideWidget_Implementation() override;
+	
+	bool GetUnlocked() const;
+
+	UFUNCTION(BlueprintCallable, Category = Game)
+		void Activate();
+
+	UFUNCTION(BlueprintNativeEvent, Category = Game)
+		void RunActivate();
 };

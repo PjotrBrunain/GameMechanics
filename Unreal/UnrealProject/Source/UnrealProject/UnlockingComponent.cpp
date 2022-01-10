@@ -20,7 +20,12 @@ void UUnlockingComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+	bool unlocked{true};
+	for (auto actor : m_pUnlockingActors)
+	{
+		unlocked = unlocked && actor->GetUnlocked();
+	}
+	m_IsUnlocked = unlocked;
 }
 
 
@@ -30,5 +35,22 @@ void UUnlockingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	m_AccuTime += DeltaTime;
+
+	if (m_AccuTime >= m_UpdateTime)
+	{
+		bool unlocked{ true };
+		for (auto actor : m_pUnlockingActors)
+		{
+			unlocked = unlocked && actor->GetUnlocked();
+		}
+		m_IsUnlocked = unlocked;
+		m_AccuTime = 0;
+	}
+}
+
+bool UUnlockingComponent::GetIsUnlocked()
+{
+	return m_IsUnlocked;
 }
 

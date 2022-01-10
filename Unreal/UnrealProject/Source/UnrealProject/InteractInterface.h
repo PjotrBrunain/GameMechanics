@@ -24,7 +24,7 @@ class UNREALPROJECT_API IInteractInterface
 public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact)
-		virtual void ShowWidget() = 0;
+		void ShowWidget();
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact)
-		virtual void HideWidget() = 0;
+		void HideWidget();
 };
