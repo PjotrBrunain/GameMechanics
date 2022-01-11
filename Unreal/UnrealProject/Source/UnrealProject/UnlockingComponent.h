@@ -8,7 +8,7 @@
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UNREALPROJECT_API UUnlockingComponent : public UActorComponent
+class UNREALPROJECT_API UUnlockingComponent : public UPrimitiveComponent
 {
 	GENERATED_BODY()
 
@@ -29,11 +29,26 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
 		float m_UpdateTime{};
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+		TArray<UStaticMeshComponent*> m_pUnlockingIcons{};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+		UStaticMeshComponent* m_pUnlockingIcon {};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+		FVector m_pLabelOffSet {};
+
 	float m_AccuTime{};
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+		UStaticMesh* m_pPlaneMesh{};
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	bool GetIsUnlocked();
+
+	UFUNCTION(CallInEditor, Category = Attributes)
+		void UpdateUnlockables();
 };
