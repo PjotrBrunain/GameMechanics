@@ -32,27 +32,27 @@ protected:
 	//UPROPERTY(BlueprintAssignable, Category = ActivatedEvent)
 	//	FActivated m_Activated{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta=(DisplayName="WidgetLocation"))
 		FVector m_WidgetLocation {};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta = (DisplayName = "EnabledWidget"))
 		UWidgetComponent* m_pEnabledWidget{};
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta = (DisplayName = "DisabledWidget"))
 		UWidgetComponent* m_pDisabledWiget{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UnlockingComponent)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UnlockingComponent, meta = (DisplayName = "UnlockingComponent"))
 		UUnlockingComponent* m_pUnlockingComponent {};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta = (DisplayName = "StaticMesh"))
 		UStaticMeshComponent* m_pStaticMesh {};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta = (DisplayName = "WidgetEnabled"))
 		bool m_WidgetEnabled{true};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable, meta = (DisplayName = "InteractableDisabled"))
 		bool m_Disabled{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Interactable, meta = (DisplayName = "IsUnlocked"))
 		bool m_Unlocked{};
 public:	
 	// Called every frame

@@ -402,6 +402,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "2662B834334F1595D47E66B5DAABFDCC1F91834D",
+			"Assets": [
+				"/Game/StarterContent/Materials/M_Metal_Steel"
+			]
+		},
+		{
 			"ShaderMapHash": "4C677C082F3DCF98507A60C0927AC77006E2DA72",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Rust"
@@ -564,9 +570,28 @@
 			]
 		},
 		{
-			"ShaderMapHash": "2662B834334F1595D47E66B5DAABFDCC1F91834D",
+			"ShaderMapHash": "4808F2C13D119176F2E8C48220A0C41C36814F04",
 			"Assets": [
-				"/Game/StarterContent/Materials/M_Metal_Steel"
+				"/Game/StarterContent/Props/Materials/M_Lamp"
+			]
+		},
+		{
+			"ShaderMapHash": "73675733B6C9FB625BD19471C448920CFCC717FE",
+			"Assets": [
+				"/Game/StarterContent/Particles/Materials/M_smoke_subUV"
+			]
+		},
+		{
+			"ShaderMapHash": "E728275E86305BFF6DC77C8B1CF973DB1FB3C6C7",
+			"Assets": [
+				"/Game/StarterContent/Particles/Materials/M_Spark"
+			]
+		},
+		{
+			"ShaderMapHash": "5FB583605FAD51777093E020EDE159CC4A7441AB",
+			"Assets": [
+				"/Game/StarterContent/Particles/Materials/M_Radial_Gradient",
+				"/Game/StarterContent/Particles/Materials/M_radial_ramp"
 			]
 		},
 		{
@@ -582,19 +607,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "4808F2C13D119176F2E8C48220A0C41C36814F04",
-			"Assets": [
-				"/Game/StarterContent/Props/Materials/M_Lamp"
-			]
-		},
-		{
-			"ShaderMapHash": "5FB583605FAD51777093E020EDE159CC4A7441AB",
-			"Assets": [
-				"/Game/StarterContent/Particles/Materials/M_Radial_Gradient",
-				"/Game/StarterContent/Particles/Materials/M_radial_ramp"
-			]
-		},
-		{
 			"ShaderMapHash": "13B9C1BFAE87A304BD7E1C7C6112EEF4A5AA66A5",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Heat_Distortion"
@@ -604,18 +616,6 @@
 			"ShaderMapHash": "DB4A6E58D03435E971AEBB01A0B5F65BA94DCCD5",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Fire_SubUV"
-			]
-		},
-		{
-			"ShaderMapHash": "73675733B6C9FB625BD19471C448920CFCC717FE",
-			"Assets": [
-				"/Game/StarterContent/Particles/Materials/M_smoke_subUV"
-			]
-		},
-		{
-			"ShaderMapHash": "E728275E86305BFF6DC77C8B1CF973DB1FB3C6C7",
-			"Assets": [
-				"/Game/StarterContent/Particles/Materials/M_Spark"
 			]
 		},
 		{
@@ -662,15 +662,15 @@
 			]
 		},
 		{
-			"ShaderMapHash": "CBE1B9A36802EF5FE309B1F94BBC5001044B3DF3",
-			"Assets": [
-				"/Game/StarterContent/Materials/M_AssetPlatform"
-			]
-		},
-		{
 			"ShaderMapHash": "F54906C80055D636BC39802D22A7721B7F62D200",
 			"Assets": [
 				"/Engine/EditorMaterials/Thumbnails/SkySphereMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "CBE1B9A36802EF5FE309B1F94BBC5001044B3DF3",
+			"Assets": [
+				"/Game/StarterContent/Materials/M_AssetPlatform"
 			]
 		},
 		{
@@ -684,10 +684,10 @@
 		{
 			"ShaderMapHash": "AF630D10EC29E174CC6981011633B94F1A86668B",
 			"Assets": [
-				"/Game/UITextures/Icon3_Mat",
-				"/Game/UITextures/Icon0_Mat",
+				"/Game/UITextures/Icon2_Mat",
 				"/Game/UITextures/Icon1_Mat",
-				"/Game/UITextures/Icon2_Mat"
+				"/Game/UITextures/Icon0_Mat",
+				"/Game/UITextures/Icon3_Mat"
 			]
 		},
 		{

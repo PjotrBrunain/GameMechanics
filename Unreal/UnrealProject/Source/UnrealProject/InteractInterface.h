@@ -23,8 +23,8 @@ class UNREALPROJECT_API IInteractInterface
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact, meta = (DisplayName = "InteractShowWidget"))
 		void ShowWidget();
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = Interact, meta = (DisplayName = "InteractHideWidget"))
 		void HideWidget();
 };

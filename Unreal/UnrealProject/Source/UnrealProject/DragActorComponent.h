@@ -20,10 +20,10 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Attributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Attributes, meta=(DisplayName="Dragging"))
 	bool m_Dragging{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta=(DisplayName="DragOffset"))
 	FVector m_DragOffset {};
 	
 public:	

@@ -20,28 +20,28 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (DisplayName = "IsUnlocked"))
 		bool m_IsUnlocked{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (DisplayName = "UnlockingActors"))
 		TArray<AInteractable*> m_pUnlockingActors{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (DisplayName = "UpdateTime"))
 		float m_UpdateTime{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
-		TArray<UStaticMeshComponent*> m_pUnlockingIcons{};
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
-		UStaticMeshComponent* m_pUnlockingIcon {};
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
-		FVector m_pLabelOffSet {};
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	//	TArray<UStaticMeshComponent*> m_pUnlockingIcons{};
+	//
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	//	UStaticMeshComponent* m_pUnlockingIcon {};
+	//
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	//	FVector m_pLabelOffSet {};
 
 	float m_AccuTime{};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
-		UStaticMesh* m_pPlaneMesh{};
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
+	//	UStaticMesh* m_pPlaneMesh{};
 
 public:	
 	// Called every frame
