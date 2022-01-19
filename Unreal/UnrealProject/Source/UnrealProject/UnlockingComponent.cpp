@@ -10,6 +10,8 @@ UUnlockingComponent::UUnlockingComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
+
+	//Tried getting automatic labeling to work but couldn't
 	//static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Game/Meshes/Plane.Plane'"));
 	//m_pPlaneMesh = MeshAsset.Object;
 	// ...

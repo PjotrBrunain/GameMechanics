@@ -4,14 +4,10 @@
 #include "InteractInterface.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-//#include "Delegates/Delegate.h"
 
 class UWidgetComponent;
 class UStaticMeshComponent;
 class UUnlockingComponent;
-//DECLARE_MULTICAST_DELEGATE(FActivated);
-//DECLARE_MULTICAST_DELEGATE(FActivated);
-//DECLARE_DYNAMIC_DELEGATE(FActivated);
 
 #include "Interactable.generated.h"
 
@@ -28,9 +24,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	bool m_IsActive{};
-
-	//UPROPERTY(BlueprintAssignable, Category = ActivatedEvent)
-	//	FActivated m_Activated{};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WidgetAttributes, meta=(DisplayName="WidgetLocation"))
 		FVector m_WidgetLocation {};

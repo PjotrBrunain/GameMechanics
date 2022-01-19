@@ -29,6 +29,7 @@ void UDragActorComponent::BeginPlay()
 void UDragActorComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	//Do dragging action
 	if (m_Dragging)
 	{
 		auto pawn = GetWorld()->GetFirstPlayerController()->GetPawn();

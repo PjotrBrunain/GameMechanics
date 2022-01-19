@@ -29,6 +29,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (DisplayName = "UpdateTime"))
 		float m_UpdateTime{};
 
+	//Tried adding automatic labeling but couldn't get it to work
+
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
 	//	TArray<UStaticMeshComponent*> m_pUnlockingIcons{};
 	//
@@ -37,12 +39,11 @@ protected:
 	//
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
 	//	FVector m_pLabelOffSet {};
-
-	float m_AccuTime{};
-
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes)
 	//	UStaticMesh* m_pPlaneMesh{};
 
+	float m_AccuTime{};
+	
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
