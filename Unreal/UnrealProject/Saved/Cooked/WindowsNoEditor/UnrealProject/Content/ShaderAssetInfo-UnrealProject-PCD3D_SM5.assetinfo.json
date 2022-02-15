@@ -402,12 +402,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "2662B834334F1595D47E66B5DAABFDCC1F91834D",
-			"Assets": [
-				"/Game/StarterContent/Materials/M_Metal_Steel"
-			]
-		},
-		{
 			"ShaderMapHash": "4C677C082F3DCF98507A60C0927AC77006E2DA72",
 			"Assets": [
 				"/Game/StarterContent/Materials/M_Metal_Rust"
@@ -595,18 +589,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "C380564A6414222F6A7E5F57D0F14982D5FD4F14",
-			"Assets": [
-				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
-			]
-		},
-		{
-			"ShaderMapHash": "F66FC83168E3609D05D512B3BC2E29DE9767506D",
-			"Assets": [
-				"/Game/StarterContent/Materials/M_Basic_Floor"
-			]
-		},
-		{
 			"ShaderMapHash": "13B9C1BFAE87A304BD7E1C7C6112EEF4A5AA66A5",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Heat_Distortion"
@@ -616,6 +598,24 @@
 			"ShaderMapHash": "DB4A6E58D03435E971AEBB01A0B5F65BA94DCCD5",
 			"Assets": [
 				"/Game/StarterContent/Particles/Materials/M_Fire_SubUV"
+			]
+		},
+		{
+			"ShaderMapHash": "F66FC83168E3609D05D512B3BC2E29DE9767506D",
+			"Assets": [
+				"/Game/StarterContent/Materials/M_Basic_Floor"
+			]
+		},
+		{
+			"ShaderMapHash": "C380564A6414222F6A7E5F57D0F14982D5FD4F14",
+			"Assets": [
+				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
+			]
+		},
+		{
+			"ShaderMapHash": "2662B834334F1595D47E66B5DAABFDCC1F91834D",
+			"Assets": [
+				"/Game/StarterContent/Materials/M_Metal_Steel"
 			]
 		},
 		{
@@ -674,20 +674,20 @@
 			]
 		},
 		{
+			"ShaderMapHash": "AF630D10EC29E174CC6981011633B94F1A86668B",
+			"Assets": [
+				"/Game/UITextures/Icon0_Mat",
+				"/Game/UITextures/Icon1_Mat",
+				"/Game/UITextures/Icon2_Mat",
+				"/Game/UITextures/Icon3_Mat"
+			]
+		},
+		{
 			"ShaderMapHash": "A4BC21BDB19D9A2A7ACA48D6578362C6FF2248BE",
 			"Assets": [
 				"/Game/Material/Mat_Hedge",
 				"/Game/Material/Mat_Walls",
 				"/Game/Material/Mat_Door"
-			]
-		},
-		{
-			"ShaderMapHash": "AF630D10EC29E174CC6981011633B94F1A86668B",
-			"Assets": [
-				"/Game/UITextures/Icon2_Mat",
-				"/Game/UITextures/Icon1_Mat",
-				"/Game/UITextures/Icon0_Mat",
-				"/Game/UITextures/Icon3_Mat"
 			]
 		},
 		{

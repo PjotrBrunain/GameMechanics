@@ -503,7 +503,7 @@ Engine:/Script/HardwareTargeting.HardwareTargetingSettings:TargetedHardwareClass
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedTargetedHardwareClass:0=Desktop
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:DefaultGraphicsPerformance:0=Maximum
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedDefaultGraphicsPerformance:0=Maximum
-Game:/Script/UnrealEd.ProjectPackagingSettings:StagingDirectory:0=(Path="E/GameMechanics/Unreal/Build")
+Game:/Script/UnrealEd.ProjectPackagingSettings:StagingDirectory:0=(Path="E/2DAE06_Brunain_Pjotr/Build")
 Game:/Script/UnrealEd.ProjectPackagingSettings:BuildConfiguration:0=PPBC_Development
 Game:/Script/UnrealEd.ProjectPackagingSettings:FullRebuild:0=False
 Game:/Script/UnrealEd.ProjectPackagingSettings:UsePakFile:0=True
